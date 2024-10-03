@@ -1,5 +1,10 @@
 #   https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline
 
+# To test
+# 
+# targets::tar_manifest(fields = all_of("command"))
+# targets::tar_visnetwork()
+
 # Load packages required to define the pipeline:
 library(targets)
 # library(tarchetypes) # Load other packages as needed.
@@ -18,5 +23,9 @@ list(
   tar_target(
     name = data_team,
     command = build_team()
+  ),
+  tar_target(
+    name = data_proceedings,
+    command = build_proceedings()
   )
 )
