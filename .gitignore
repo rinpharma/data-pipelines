@@ -1,5 +1,6 @@
 output/all_data.rds
 README.html
+index.html
 output/
 README_files
 /.quarto/

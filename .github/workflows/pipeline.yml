@@ -24,6 +24,9 @@ jobs:
             any::rcmdcheck
             any::XML
 
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Cache packages
         uses: actions/cache@v1
         with:
@@ -58,7 +61,7 @@ jobs:
       - name: Copy output and rename README.html to index.html
         run: |
           cp -R output/* gh-pages/
-          mv gh-pages/README.html gh-pages/index.html
+          mv index.html gh-pages/index.html
 
       - name: Commit and push changes
         run: |
