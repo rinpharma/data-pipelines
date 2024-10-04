@@ -11,7 +11,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("tibble"), # Packages that your targets need for their tasks.
+  packages = c("tibble","qs"), # Packages that your targets need for their tasks.
   format = "qs", # Optionally set the default storage format. qs is fast.
 )
 

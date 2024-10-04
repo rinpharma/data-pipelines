@@ -5,3 +5,4 @@ output/
 README_files
 /.quarto/
 /_site/
+.DS_Store
