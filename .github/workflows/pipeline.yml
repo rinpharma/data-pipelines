@@ -25,8 +25,12 @@ jobs:
             any::XML
 
       - name: Install ubuntu deps
-        run: sudo apt-get install -y --no-install-recommends \
-          libcurl4-openssl-dev
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            curl \
+            libcurl4-openssl-dev \
+            libsodium-dev
 
       - name: Checkout repo
         uses: actions/checkout@v4
