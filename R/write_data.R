@@ -3,6 +3,9 @@ write_data <- function(
   processed_team,
   processed_proceedings
 ){
+
+  mkdir("output")
+
   readr::write_rds(
     all_data <- list(
       raw_data = raw_data,
