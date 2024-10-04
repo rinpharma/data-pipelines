@@ -1,1 +1,6 @@
 output/all_data.rds
+README.html
+output/
+README_files
+/.quarto/
+/_site/

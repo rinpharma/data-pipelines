@@ -1,6 +1,6 @@
 ---
 title: "Data pipelines for R/Pharma"
-format: gfm
+format: html
 ---
 
 
@@ -12,11 +12,15 @@ Check the pipeline with `targets::tar_manifest(fields = all_of("command"))`
 
 Visualise the pipeline with `targets::tar_visnetwork()`
 
-```{r}
-targets::tar_visnetwork()
+```{r, results = "asis", echo = FALSE, warnings = FALSE}
+cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 ```
 
+
+
 # Setup
+
+Code to create gsheets token.
 
 ```{r, eval = FALSE}
 # Generate credentials for gsheet access
