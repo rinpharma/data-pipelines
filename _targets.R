@@ -21,11 +21,23 @@ tar_source()
 # Replace the target list below with your own:
 list(
   tar_target(
-    name = data_team,
-    command = build_team()
+    name = get_gsheet_data,
+    command = get_data()
   ),
   tar_target(
-    name = data_proceedings,
-    command = build_proceedings()
+    name = data_processed_team,
+    command = build_team(get_gsheet_data[["team"]])
+  ),
+  tar_target(
+    name = data_processed_proceedings,
+    command = build_proceedings(get_gsheet_data[["all_conferences"]])
+  ),
+  tar_target(
+    name = write_data_to_files,
+    command = write_data(
+      raw_data = get_gsheet_data,
+      processed_team = data_processed_team,
+      processed_proceedings = data_processed_proceedings
+    )
   )
 )

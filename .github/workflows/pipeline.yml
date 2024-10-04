@@ -1,0 +1,51 @@
+name: build_and_deploy
+
+on:
+  schedule:
+    - cron: '0 03 * * *'
+  push:
+    branches:
+      - main
+
+env:
+  RENV_PATHS_ROOT: ~/.cache/R/renv
+
+jobs:
+  blogdown:
+    name: build_and_push_to_gh_pages
+    runs-on: ubuntu-20.04
+    env:
+      GOOGLESHEETS4_PASSWORD: ${{ secrets.GOOGLESHEETS4_PASSWORD }}
+    steps:
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.1.0'
+          extra-packages: |
+            any::rcmdcheck
+            any::XML
+      - name: Cache packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Restore packages
+        shell: Rscript {0}
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
+
+      - name: Run pipeline
+        shell: Rscript {0}
+        run: |
+          targets::tar_make()
+
+      - name: Render README
+        run: Rscript -e 'rmarkdown::render("README.qmd")'
+
+      - name: Commit results
+        run: |
+          git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"

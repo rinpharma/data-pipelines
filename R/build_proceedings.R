@@ -1,29 +1,11 @@
 build_proceedings <- function(
-  file_name = "rinpharma-4ac2ad6eba3b.json",
-  secret_name = "googlesheets4",
-  sheet_url = "https://docs.google.com/spreadsheets/d/1NaDnMRh2nOBCzBUxbIyJBVWd_InaEMLTW0rEJtD2ywE/edit#gid=0"  
+  data
 ){
 
-  path <- paste0("inst/secret/", file_name)
-  raw <- readBin(path, "raw", file.size(path))
-  json <- sodium::data_decrypt(
-    bin = raw, key = gargle:::secret_pw_get(secret_name),
-    nonce = gargle:::secret_nonce()
-  )
-  pass <- rawToChar(json)
-
-  googlesheets4::gs4_auth(
-    scopes = 'https://www.googleapis.com/auth/spreadsheets',
-    path = pass
-    )
-
-  # Get data -------------------------------------------------------------------
-
-    d_raw_proceedings <- googlesheets4::read_sheet(sheet_url, sheet = "all_conferences")
 
   # Clean data -----------------------------------------------------------------
 
-    d_all <- d_raw_proceedings |>
+    d_all <- data |>
       dplyr::arrange(Date,Start) |>
         dplyr::mutate(
         # Modify col
