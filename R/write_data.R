@@ -4,7 +4,7 @@ write_data <- function(
   processed_proceedings
 ){
 
-  mkdir("output")
+  dir.create("output")
 
   readr::write_rds(
     all_data <- list(
