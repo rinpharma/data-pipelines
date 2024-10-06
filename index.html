@@ -5023,6 +5023,12 @@ z-index: 1000;
 <li>Output: Direct links below. Stored in gh-pages branch</li>
 </ul>
 </section>
+<section id="to-do" class="level2">
+<h2 class="anchored" data-anchor-id="to-do">TO-DO</h2>
+<ul>
+<li><a href="https://github.com/rinpharma/data-pipelines/issues/1">Put thought into columns</a></li>
+</ul>
+</section>
 <section id="rebuilding" class="level2">
 <h2 class="anchored" data-anchor-id="rebuilding">Rebuilding</h2>
 <p>Run the pipeline with <code>targets::tar_make()</code></p>
@@ -5063,7 +5069,9 @@ z-index: 1000;
 </div>
 </div>
 </div>
-<p>$# Output</p>
+</section>
+<section id="output" class="level2">
+<h2 class="anchored" data-anchor-id="output">Output</h2>
 <p>The current files are available</p>
 <ul>
 <li><a href="output/processed_proceedings.csv">processed_proceedings.csv</a></li>
@@ -5071,7 +5079,7 @@ z-index: 1000;
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_delim</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;output/processed_proceedings.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_proceedings.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5098,7 +5106,7 @@ $ missing_content &lt;chr&gt; &quot;Unfortunately we do not currently have an ab
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_delim</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;output/processed_team.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_team.csv&quot;</span>, <span class="at">delim =</span> <span class="st">&quot;;&quot;</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
