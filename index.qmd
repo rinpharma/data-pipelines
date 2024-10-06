@@ -1,6 +1,8 @@
 ---
 title: "Data pipelines for R/Pharma"
-format: html
+format: 
+  html:
+    self-contained: true
 ---
 
 
@@ -16,7 +18,27 @@ Visualise the pipeline with `targets::tar_visnetwork()`
 cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 ```
 
+# Output
 
+The current files are available
+
+* [processed_proceedings.csv](output/processed_proceedings.csv)
+* [processed_team.csv](output/processed_team.csv)
+
+```{r}
+readr::read_delim(
+  "output/processed_proceedings.csv", delim = ";",
+  show_col_types = FALSE
+  ) |>
+  dplyr::glimpse()
+```
+
+```{r}
+readr::read_delim(
+  "output/processed_team.csv", delim = ";",
+  show_col_types = FALSE) |>
+  dplyr::glimpse()
+```
 
 # Setup
 
