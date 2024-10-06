@@ -1,7 +1,7 @@
 write_data <- function(
-  raw_data,
   processed_team,
-  processed_proceedings
+  processed_proceedings,
+  processed_workshops
 ){
 
 
