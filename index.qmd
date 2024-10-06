@@ -38,18 +38,18 @@ The current files are available
 * [processed_team.csv](output/processed_team.csv)
 
 ```{r}
-readr::read_delim(
-  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.csv", delim = ";",
-  show_col_types = FALSE
-  ) |>
-  dplyr::glimpse()
+#readr::read_delim(
+#  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.parquet", delim = ";",
+#  show_col_types = FALSE
+#  ) |>
+#  dplyr::glimpse()
 ```
 
 ```{r}
-readr::read_delim(
-  "https://rinpharma.github.io/data-pipelines/output/processed_team.csv", delim = ";",
-  show_col_types = FALSE) |>
-  dplyr::glimpse()
+#readr::read_delim(
+#  "https://rinpharma.github.io/data-pipelines/output/processed_team.parquet", delim = ";",
+#  show_col_types = FALSE) |>
+#  dplyr::glimpse()
 ```
 
 # Setup
