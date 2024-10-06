@@ -57,8 +57,8 @@ jobs:
         run: |
           targets::tar_make()
 
-      - name: Render README
-        run: quarto render README.qmd
+      - name: Render doc
+        run: quarto render index.qmd
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v3
