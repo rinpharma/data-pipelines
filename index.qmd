@@ -14,6 +14,10 @@ format:
 * Rendered run: [rinpharma.github.io/data-pipelines/](https://rinpharma.github.io/data-pipelines/)
 * Output: Direct links below. Stored in gh-pages branch
 
+## TO-DO
+
+* [Put thought into columns](https://github.com/rinpharma/data-pipelines/issues/1)
+
 ## Rebuilding
 
 Run the pipeline with `targets::tar_make()`
@@ -26,7 +30,7 @@ Visualise the pipeline with `targets::tar_visnetwork()`
 cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 ```
 
-$# Output
+## Output
 
 The current files are available
 
@@ -35,7 +39,7 @@ The current files are available
 
 ```{r}
 readr::read_delim(
-  "output/processed_proceedings.csv", delim = ";",
+  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.csv", delim = ";",
   show_col_types = FALSE
   ) |>
   dplyr::glimpse()
@@ -43,7 +47,7 @@ readr::read_delim(
 
 ```{r}
 readr::read_delim(
-  "output/processed_team.csv", delim = ";",
+  "https://rinpharma.github.io/data-pipelines/output/processed_team.csv", delim = ";",
   show_col_types = FALSE) |>
   dplyr::glimpse()
 ```
