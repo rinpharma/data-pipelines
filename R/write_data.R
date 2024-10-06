@@ -4,7 +4,8 @@ write_data <- function(
   processed_proceedings
 ){
 
-  dir.create("output")
+
+  if (!dir.exists("output")) dir.create("output")
 
   readr::write_rds(
     all_data <- list(
@@ -20,6 +21,6 @@ write_data <- function(
   )
 
   readr::write_csv2(
-    processed_team, "output/processed_proceedings.csv"
+    processed_proceedings, "output/processed_proceedings.csv"
   )
 }
