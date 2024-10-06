@@ -34,8 +34,9 @@ cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 
 The current files are available
 
-* [processed_proceedings.csv](output/processed_proceedings.csv)
-* [processed_team.csv](output/processed_team.csv)
+* [processed_proceedings.parquet](output/processed_proceedings.parquet)
+* [processed_team.parquet](output/processed_team.parquet)
+* [processed_workshops.parquet](output/processed_workshops.parquet)
 
 ```{r}
 #readr::read_delim(
