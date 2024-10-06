@@ -70,7 +70,8 @@ jobs:
         run: |
           cp -R output/* gh-pages/
           mv index.html gh-pages/index.html
-          mv output gh-pages/output
+          mkdir gh-pages/output
+          mv output/* gh-pages/output/
 
       - name: Commit and push changes
         run: |
