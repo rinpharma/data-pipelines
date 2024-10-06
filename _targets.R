@@ -33,11 +33,16 @@ list(
     command = build_proceedings(get_gsheet_data[["all_conferences"]])
   ),
   tar_target(
+    name = data_processed_workshops,
+    command = build_workshops(get_gsheet_data[["workshops"]])
+  ),
+  tar_target(
     name = write_data_to_files,
     command = write_data(
       raw_data = get_gsheet_data,
       processed_team = data_processed_team,
-      processed_proceedings = data_processed_proceedings
+      processed_proceedings = data_processed_proceedings,
+      processed_workshops = data_processed_workshops
     )
   )
 )
