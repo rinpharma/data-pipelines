@@ -39,18 +39,24 @@ The current files are available
 * [processed_workshops.parquet](output/processed_workshops.parquet)
 
 ```{r}
-#readr::read_delim(
-#  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.parquet", delim = ";",
-#  show_col_types = FALSE
-#  ) |>
-#  dplyr::glimpse()
+arrow::read_parquet(
+  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.parquet"
+  ) |>
+  dplyr::glimpse()
 ```
 
 ```{r}
-#readr::read_delim(
-#  "https://rinpharma.github.io/data-pipelines/output/processed_team.parquet", delim = ";",
-#  show_col_types = FALSE) |>
-#  dplyr::glimpse()
+arrow::read_parquet(
+  "https://rinpharma.github.io/data-pipelines/output/processed_team.parquet"
+  ) |>
+  dplyr::glimpse()
+```
+
+```{r}
+arrow::read_parquet(
+  "https://rinpharma.github.io/data-pipelines/output/processed_workshops.parquet"
+  ) |>
+  dplyr::glimpse()
 ```
 
 # Setup
