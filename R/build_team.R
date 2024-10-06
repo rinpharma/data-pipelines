@@ -7,9 +7,4 @@ build_team <- function(
     d_team <- data |>
       dplyr::select(-email) |> # don't print emails to public site
       dplyr::filter(!is.na(linkedin)) 
-    
-    d_team[is.na(d_team)] <- ""
-    
-
-    d_team
 }
