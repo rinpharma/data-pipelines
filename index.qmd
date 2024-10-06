@@ -8,6 +8,14 @@ format:
 
 # data-pipelines
 
+## Structure
+
+* Code: [rinpharma/data-pipelines](https://github.com/rinpharma/data-pipelines)
+* Rendered run: [rinpharma.github.io/data-pipelines/](https://rinpharma.github.io/data-pipelines/)
+* Output: Direct links below. Stored in gh-pages branch
+
+## Rebuilding
+
 Run the pipeline with `targets::tar_make()`
 
 Check the pipeline with `targets::tar_manifest(fields = all_of("command"))`
@@ -18,7 +26,7 @@ Visualise the pipeline with `targets::tar_visnetwork()`
 cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 ```
 
-# Output
+$# Output
 
 The current files are available
 
