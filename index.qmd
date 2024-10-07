@@ -20,6 +20,8 @@ format:
 
 ## Rebuilding
 
+This data (and this page) rebuild automatically based on the [CRON schedule specified in the github action](https://github.com/rinpharma/data-pipelines/blob/main/.github/workflows/pipeline.yml#L5).
+
 Run the pipeline with `targets::tar_make()`
 
 Check the pipeline with `targets::tar_manifest(fields = all_of("command"))`
