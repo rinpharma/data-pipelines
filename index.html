@@ -5031,6 +5031,7 @@ z-index: 1000;
 </section>
 <section id="rebuilding" class="level2">
 <h2 class="anchored" data-anchor-id="rebuilding">Rebuilding</h2>
+<p>This data (and this page) rebuild automatically based on the <a href="https://github.com/rinpharma/data-pipelines/blob/main/.github/workflows/pipeline.yml#L5">CRON schedule specified in the github action</a>.</p>
 <p>Run the pipeline with <code>targets::tar_make()</code></p>
 <p>Check the pipeline with <code>targets::tar_manifest(fields = all_of(&quot;command&quot;))</code></p>
 <p>Visualise the pipeline with <code>targets::tar_visnetwork()</code></p>
