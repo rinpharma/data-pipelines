@@ -13,7 +13,7 @@ env:
 jobs:
   blogdown:
     name: build_and_push_to_gh_pages
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     env:
       GOOGLESHEETS4_PASSWORD: ${{ secrets.GOOGLESHEETS4_PASSWORD }}
     steps:
