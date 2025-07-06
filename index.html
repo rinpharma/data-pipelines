@@ -4710,6 +4710,7 @@ z-index: 1000;
   subgraph Graph
     direction LR
     xbd4a273a79a766d1([&quot;data_processed_proceedings&quot;]):::uptodate --&gt; x846d45454e9823b7([&quot;write_data_to_files&quot;]):::uptodate
+    xe6fae3abc4970767([&quot;data_processed_talks&quot;]):::uptodate --&gt; x846d45454e9823b7([&quot;write_data_to_files&quot;]):::uptodate
     x986bd675a516b5b3([&quot;data_processed_team&quot;]):::uptodate --&gt; x846d45454e9823b7([&quot;write_data_to_files&quot;]):::uptodate
     xca33cab3ec65c968([&quot;data_processed_workshops&quot;]):::uptodate --&gt; x846d45454e9823b7([&quot;write_data_to_files&quot;]):::uptodate
     x4a9bd41924e0fdb4&gt;&quot;write_data&quot;]:::uptodate --&gt; x846d45454e9823b7([&quot;write_data_to_files&quot;]):::uptodate
@@ -4718,6 +4719,8 @@ z-index: 1000;
     xdd04dc2490030259&gt;&quot;get_data&quot;]:::uptodate --&gt; xeb364ad4c7efc3d3([&quot;get_gsheet_data&quot;]):::uptodate
     xe1268667a4ed1fd8&gt;&quot;build_team&quot;]:::uptodate --&gt; x986bd675a516b5b3([&quot;data_processed_team&quot;]):::uptodate
     xeb364ad4c7efc3d3([&quot;get_gsheet_data&quot;]):::uptodate --&gt; x986bd675a516b5b3([&quot;data_processed_team&quot;]):::uptodate
+    x24d9c683daf7bfc6&gt;&quot;build_talks&quot;]:::uptodate --&gt; xe6fae3abc4970767([&quot;data_processed_talks&quot;]):::uptodate
+    xeb364ad4c7efc3d3([&quot;get_gsheet_data&quot;]):::uptodate --&gt; xe6fae3abc4970767([&quot;data_processed_talks&quot;]):::uptodate
     xa0ae033e33afa834&gt;&quot;build_workshops&quot;]:::uptodate --&gt; xca33cab3ec65c968([&quot;data_processed_workshops&quot;]):::uptodate
     xeb364ad4c7efc3d3([&quot;get_gsheet_data&quot;]):::uptodate --&gt; xca33cab3ec65c968([&quot;data_processed_workshops&quot;]):::uptodate
   end
@@ -4736,8 +4739,8 @@ z-index: 1000;
 <h2 class="anchored" data-anchor-id="output">Output</h2>
 <p>The current files are available</p>
 <ul>
+<li><a href="output/processed_talks.parquet">processed_talks.parquet</a></li>
 <li><a href="output/processed_proceedings.parquet">processed_proceedings.parquet</a></li>
-<li><a href="output/processed_team.parquet">processed_team.parquet</a></li>
 <li><a href="output/processed_workshops.parquet">processed_workshops.parquet</a></li>
 </ul>
 <div class="cell">
