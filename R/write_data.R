@@ -1,6 +1,7 @@
 write_data <- function(
   processed_team,
   processed_proceedings,
+  processed_talks,
   processed_workshops
 ){
 
@@ -20,5 +21,6 @@ write_data <- function(
 
   help_save_file(processed_team)
   help_save_file(processed_proceedings)
+  help_save_file(processed_talks)
   help_save_file(processed_workshops)
 }

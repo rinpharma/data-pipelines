@@ -36,6 +36,7 @@ cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 
 The current files are available
 
+* [processed_talks.parquet](output/processed_talks.parquet)
 * [processed_proceedings.parquet](output/processed_proceedings.parquet)
 * [processed_team.parquet](output/processed_team.parquet)
 * [processed_workshops.parquet](output/processed_workshops.parquet)
@@ -43,6 +44,13 @@ The current files are available
 ```{r}
 arrow::read_parquet(
   "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.parquet"
+  ) |>
+  dplyr::glimpse()
+```
+
+```{r}
+arrow::read_parquet(
+  "https://rinpharma.github.io/data-pipelines/output/processed_talks.parquet"
   ) |>
   dplyr::glimpse()
 ```
