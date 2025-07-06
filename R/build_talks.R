@@ -12,8 +12,10 @@ build_talks <- function(
         Title = gsub("'","",Title),
         # Add col
         Year = format(Date, format="%Y"),
-        ID = paste0("rinpharma_",dplyr::row_number())
-      ) |>
+        ID = paste0("rinpharma_",dplyr::row_number()),
+        Start = format(Start, "%H:%M:%S"),
+        End = format(End, "%H:%M:%S")
+        ) |>
         dplyr::select(
         ID,Event,Abstract,Type, Year, Date, Start, End, Speaker, Affiliation, Title, Slides, Video
       )
