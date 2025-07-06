@@ -4741,6 +4741,7 @@ z-index: 1000;
 <ul>
 <li><a href="output/processed_talks.parquet">processed_talks.parquet</a></li>
 <li><a href="output/processed_proceedings.parquet">processed_proceedings.parquet</a></li>
+<li><a href="output/processed_team.parquet">processed_team.parquet</a></li>
 <li><a href="output/processed_workshops.parquet">processed_workshops.parquet</a></li>
 </ul>
 <div class="cell">
@@ -4768,9 +4769,34 @@ $ Missing_Content   &lt;chr&gt; &quot;Unfortunately we do not currently have an 
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>arrow<span class="sc">::</span><span class="fu">read_parquet</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_team.parquet&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_talks.parquet&quot;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 502
+Columns: 15
+$ ID                &lt;chr&gt; &quot;rinpharma_1&quot;, &quot;rinpharma_2&quot;, &quot;rinpharma_3&quot;, &quot;rinpha…
+$ Event             &lt;chr&gt; &quot;2018 Conference&quot;, &quot;2018 Conference&quot;, &quot;2018 Conferen…
+$ Abstract          &lt;chr&gt; NA, NA, NA, NA, NA, &quot;Lilliam will be presenting a pe…
+$ Type              &lt;chr&gt; &quot;Workshop&quot;, &quot;Workshop&quot;, &quot;Workshop&quot;, &quot;Workshop&quot;, &quot;Sch…
+$ Year              &lt;chr&gt; &quot;2018&quot;, &quot;2018&quot;, &quot;2018&quot;, &quot;2018&quot;, &quot;2018&quot;, &quot;2018&quot;, &quot;201…
+$ Date              &lt;dttm&gt; 2018-08-15, 2018-08-15, 2018-08-15, 2018-08-15, 201…
+$ Start             &lt;dttm&gt; 1899-12-30 08:00:00, 1899-12-30 08:00:00, 1899-12-3…
+$ End               &lt;dttm&gt; 1899-12-30 09:15:00, 1899-12-30 09:15:00, 1899-12-3…
+$ Speaker           &lt;chr&gt; &quot;Marianna Foos&quot;, &quot;Adrian Waddell&quot;, &quot;Daniel Lee&quot;, &quot;De…
+$ Affiliation       &lt;chr&gt; &quot;Biogen&quot;, &quot;Roche / Genentech&quot;, &quot;Generable&quot;, &quot;Metrum …
+$ Title             &lt;chr&gt; &quot;Keeping things Peachy when Shiny gets Hairy&quot;, &quot;Anal…
+$ Slides            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, &quot;https://github.com/…
+$ Video             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+$ Abstract_Sanitzed &lt;chr&gt; NA, NA, NA, NA, NA, &quot;Lilliam will be presenting a pe…
+$ Missing_Content   &lt;chr&gt; &quot;Unfortunately we do not currently have an abstract,…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>arrow<span class="sc">::</span><span class="fu">read_parquet</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_team.parquet&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 18
 Columns: 10
@@ -4787,10 +4813,10 @@ $ Ex_Committee    &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FA
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>arrow<span class="sc">::</span><span class="fu">read_parquet</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_workshops.parquet&quot;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>arrow<span class="sc">::</span><span class="fu">read_parquet</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://rinpharma.github.io/data-pipelines/output/processed_workshops.parquet&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 51
 Columns: 8
@@ -4810,33 +4836,33 @@ $ status        &lt;chr&gt; &quot;soldout&quot;, &quot;soldout&quot;, &quot;clos
 <h1>Setup</h1>
 <p>Code to create gsheets token.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate credentials for gsheet access</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pw_name <span class="ot">&lt;-</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_name</span>(<span class="st">&quot;googlesheets4&quot;</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>pw <span class="ot">&lt;-</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_gen</span>()</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>added pwname_pw to usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>encrypt the service account <span class="fu">token</span> (I made via goodle dev console)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>gargle<span class="sc">:::</span><span class="fu">secret_write</span>(</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;rinpharma-4ac2ad6eba3b.json&quot;</span>,</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">input =</span> <span class="st">&quot;~/Downloads/rinpharma-4ac2ad6eba3b.json&quot;</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>encrypted file is now <span class="cf">in</span> <span class="sc">/</span>inst<span class="sc">/</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>file_name <span class="ot">&lt;-</span> <span class="st">&quot;rinpharma-4ac2ad6eba3b.json&quot;</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>secret_name <span class="ot">&lt;-</span> <span class="st">&quot;googlesheets4&quot;</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;inst/secret/&quot;</span>, file_name)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">readBin</span>(path, <span class="st">&quot;raw&quot;</span>, <span class="fu">file.size</span>(path))</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>json <span class="ot">&lt;-</span> sodium<span class="sc">::</span><span class="fu">data_decrypt</span>(</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">bin =</span> raw, <span class="at">key =</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_get</span>(secret_name), </span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">nonce =</span> gargle<span class="sc">:::</span><span class="fu">secret_nonce</span>()</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="fu">rawToChar</span>(json)</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">gs4_auth</span>(<span class="at">path =</span> pass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate credentials for gsheet access</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>pw_name <span class="ot">&lt;-</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_name</span>(<span class="st">&quot;googlesheets4&quot;</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>pw <span class="ot">&lt;-</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_gen</span>()</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>added pwname_pw to usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>encrypt the service account <span class="fu">token</span> (I made via goodle dev console)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>gargle<span class="sc">:::</span><span class="fu">secret_write</span>(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;rinpharma-4ac2ad6eba3b.json&quot;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">input =</span> <span class="st">&quot;~/Downloads/rinpharma-4ac2ad6eba3b.json&quot;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>encrypted file is now <span class="cf">in</span> <span class="sc">/</span>inst<span class="sc">/</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>file_name <span class="ot">&lt;-</span> <span class="st">&quot;rinpharma-4ac2ad6eba3b.json&quot;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>secret_name <span class="ot">&lt;-</span> <span class="st">&quot;googlesheets4&quot;</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;inst/secret/&quot;</span>, file_name)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">readBin</span>(path, <span class="st">&quot;raw&quot;</span>, <span class="fu">file.size</span>(path))</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>json <span class="ot">&lt;-</span> sodium<span class="sc">::</span><span class="fu">data_decrypt</span>(</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">bin =</span> raw, <span class="at">key =</span> gargle<span class="sc">:::</span><span class="fu">secret_pw_get</span>(secret_name), </span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">nonce =</span> gargle<span class="sc">:::</span><span class="fu">secret_nonce</span>()</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>pass <span class="ot">&lt;-</span> <span class="fu">rawToChar</span>(json)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">gs4_auth</span>(<span class="at">path =</span> pass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
