@@ -1,18 +1,44 @@
-name;role;site_superuser;custom_link;github;linkedin;organising_comm;exec_comm;program_comm
-James Black;Roche / Genentech;TRUE;https://epijim.uk;epijim;epijim;TRUE;FALSE;FALSE
-Paulo Bargo;Novartis;FALSE;;;paulo-bargo-phd-10590830;TRUE;FALSE;FALSE
-Phil Bowsher;posit;TRUE;;philbowsher;philip-bowsher-67151015;TRUE;FALSE;FALSE
-Ellis Hughes;GlaxoSmithKline;FALSE;https://twitter.com/ellis_hughes;thebioengineer;ellishughes;TRUE;FALSE;FALSE
-Harvey Lieberman;Novartis;TRUE;;harveyl888;harvey-lieberman;TRUE;FALSE;FALSE
-Elena Rantou;FDA;FALSE;;;elena-rantou-79a0a339;TRUE;FALSE;FALSE
-Melvin Munsaka;AbbVie;FALSE;;;melvin-munsaka-phd-72461bb;TRUE;FALSE;FALSE
-Paul Schuette;FDA;FALSE;;;paul-schuette-40aa838;TRUE;FALSE;FALSE
-Michael Blanks;Beigene;FALSE;;;michaelblanks;TRUE;FALSE;FALSE
-Eric Nantz;Eli Lilly;FALSE;http://www.r-podcast.org;rpodcast;eric-nantz-6621617;TRUE;FALSE;FALSE
-Ning Leng;Roche / Genentech;FALSE;;lengning;ning-leng-7b2b354a;TRUE;FALSE;FALSE
-Eric Simms;Glaxosmithkline;FALSE;;;eric-simms-3897004;TRUE;FALSE;FALSE
-Satish Murthy;Janssen;FALSE;;;satish-murthy-b4236b119;TRUE;FALSE;FALSE
-Jenna Reps;Johnson & Johnson;FALSE;;;jenna-reps-479018100;TRUE;FALSE;FALSE
-Katie Igartua;Tempus;FALSE;;;catherineigartua;TRUE;FALSE;FALSE
-Jared Woolfolk;Cytel;FALSE;;;jared-woolfolk;TRUE;FALSE;FALSE
-Audrey Yeo;Roche / Genentech;FALSE;;audreyyeoCH;audrey-yeo-8000;TRUE;FALSE;FALSE
+"Name","Company","EUROPE_US_OC","EX-EUROPE_US_OC","APAC_OC","EX-APAC_OC","github","linkedin"
+"James Black","Novartis",TRUE,FALSE,FALSE,FALSE,"epijim","epijim"
+"Paulo Bargo","Novartis",TRUE,FALSE,FALSE,FALSE,NA,"paulo-bargo-phd-10590830"
+"Phil Bowsher","Posit",TRUE,FALSE,FALSE,FALSE,"philbowsher","philip-bowsher-67151015"
+"Ellis Hughes","GlaxoSmithKline",FALSE,TRUE,FALSE,FALSE,"thebioengineer","ellishughes"
+"Harvey Lieberman","Novartis",TRUE,FALSE,FALSE,FALSE,"harveyl888","harvey-lieberman"
+"Elena Rantou","FDA",TRUE,FALSE,FALSE,FALSE,NA,"elena-rantou-79a0a339"
+"Melvin Munsaka","AbbVie",TRUE,FALSE,FALSE,FALSE,NA,"melvin-munsaka-phd-72461bb"
+"Paul Schuette","FDA",TRUE,FALSE,FALSE,FALSE,NA,"paul-schuette-40aa838"
+"Michael Blanks","Exelixis",TRUE,FALSE,FALSE,FALSE,NA,"michaelblanks"
+"Eric Nantz","Eli Lilly",TRUE,FALSE,FALSE,FALSE,"rpodcast","eric-nantz-6621617"
+"Ning Leng","Roche / Genentech",TRUE,FALSE,FALSE,FALSE,"lengning","ning-leng-7b2b354a"
+"Satish Murthy","Janssen",TRUE,FALSE,FALSE,FALSE,NA,"satish-murthy-b4236b119"
+"Jenna Reps","Johnson & Johnson",FALSE,TRUE,FALSE,FALSE,NA,"jenna-reps-479018100"
+"Katie Igartua","Tempus",TRUE,FALSE,FALSE,FALSE,NA,"catherineigartua"
+"Jared Woolfolk","Cytel",TRUE,FALSE,FALSE,FALSE,NA,"jared-woolfolk"
+"Anna Giczewskau","Duke",TRUE,FALSE,FALSE,FALSE,NA,"anna-giczewska-343234155"
+"Audrey Yeo","Roche / Genentech",TRUE,FALSE,FALSE,FALSE,"audreyyeoCH","audrey-yeo-8000"
+"Edward Lauzier","Merck",FALSE,TRUE,FALSE,FALSE,NA,"edlauzier"
+"Volha Tryputsen","Janssen",FALSE,TRUE,FALSE,FALSE,"volha-tryputsen","volha-tryputsen-66566839"
+"Bella Feng","EQRx",FALSE,TRUE,FALSE,FALSE,"bellafeng","bellafeng"
+"Michael Lawrence","Roche / Genentech",FALSE,TRUE,FALSE,FALSE,"lawremi","michael-lawrence-74a9b482"
+"Reinhold Koch","Roche / Genentech",FALSE,TRUE,FALSE,FALSE,"reikoch","reinhold-koch-b8970883"
+"Min Lee","Amgen",FALSE,TRUE,FALSE,FALSE,NA,"min-lee-is"
+"John Sims","Pfizer",FALSE,TRUE,FALSE,FALSE,NA,"freestyle35"
+"Daniella Mark","Procogia",FALSE,TRUE,FALSE,FALSE,NA,"daniellamark"
+"Maya Malepati","Procogia",FALSE,TRUE,FALSE,FALSE,NA,"apoorva-malepati"
+"Juliane Manitz","EMD Serono",FALSE,TRUE,FALSE,FALSE,NA,"juliane-manitz-943178127"
+"Eric Simms","Glaxosmithkline",FALSE,TRUE,FALSE,FALSE,NA,"eric-simms-3897004"
+"Shannon Haughton","Glaxosmithkline",TRUE,FALSE,FALSE,FALSE,NA,"shannon-haughton-31a72514a"
+"Joanna Moćko-Łazarewicz","Appsilon",FALSE,TRUE,FALSE,FALSE,NA,"joanna-mocko-lazarewicz"
+"Victoria Prince","Takeda",TRUE,FALSE,FALSE,FALSE,NA,"viktoriialiublinska"
+"Jonathan Tisack","Amgen",TRUE,FALSE,FALSE,FALSE,NA,"jtisack"
+"Jeremy Wildfire","Gilead",TRUE,FALSE,FALSE,FALSE,NA,"jeremy-wildfire"
+"Daniel Sabanés Bové","RConis",FALSE,FALSE,TRUE,FALSE,"danielinteractive","danielsabanesbove"
+"Annie Yang",NA,FALSE,FALSE,TRUE,FALSE,NA,NA
+"Frank Yang","CIMS Global",FALSE,FALSE,TRUE,FALSE,NA,"frank-yang-192559236"
+"Harshal Khanolkar","Novo Nordisk",FALSE,FALSE,TRUE,FALSE,NA,"harshal-khanolkar-6a834721"
+"Joe Zhu","Roche",FALSE,FALSE,TRUE,FALSE,NA,"joe-zhu-464b5818"
+"Jonathan Carroll","Irregularly Scheduled Programming",FALSE,FALSE,TRUE,FALSE,NA,"carrolljonathan"
+"Smitha Ankinakatte","Syncorp Health Pvt Ltd",FALSE,FALSE,TRUE,FALSE,NA,"smithaankinakatte"
+"Steven Ting","Cytel",FALSE,FALSE,TRUE,FALSE,NA,"steven-ting12"
+"Yanli Chang","Novartis",FALSE,FALSE,TRUE,FALSE,NA,"yanli-chang-00b765145"
+"Yuichi Nakajima","GlaxoSmithCline K.K.",FALSE,FALSE,TRUE,FALSE,NA,"yuichi-nakajima-8984759a"
