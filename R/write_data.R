@@ -35,5 +35,6 @@ write_data <- function(
   help_save_file(processed_workshops)
 
   help_save_csv(processed_talks)
+  help_save_csv(processed_team)
 
 }
