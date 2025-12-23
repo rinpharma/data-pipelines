@@ -17,7 +17,7 @@ build_talks <- function(
         End = format(End, "%H:%M:%S")
         ) |>
         dplyr::select(
-        ID,Event,Abstract,Type, Year, Date, Start, End, Speaker, Affiliation, Title, Slides, Video
+        ID, Event, Abstract, Type, APAC, Year, Date, Start, End, Speaker, Affiliation, Title, Slides, Video
       )
     
   # Sanitise
