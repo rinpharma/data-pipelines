@@ -14,10 +14,6 @@ format:
 * Rendered run: [rinpharma.github.io/data-pipelines/](https://rinpharma.github.io/data-pipelines/)
 * Output: Direct links below. Stored in gh-pages branch
 
-## TO-DO
-
-* [Put thought into columns](https://github.com/rinpharma/data-pipelines/issues/1)
-
 ## Rebuilding
 
 This data (and this page) rebuild automatically based on the [CRON schedule specified in the github action](https://github.com/rinpharma/data-pipelines/blob/main/.github/workflows/pipeline.yml#L5).
@@ -26,7 +22,7 @@ Run the pipeline with `targets::tar_make()`
 
 Check the pipeline with `targets::tar_manifest(fields = all_of("command"))`
 
-Visualise the pipeline with `targets::tar_visnetwork()`
+Visualize the pipeline with `targets::tar_visnetwork()`
 
 ```{r, results = "asis", echo = FALSE, warnings = FALSE}
 cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
@@ -34,19 +30,12 @@ cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
 
 ## Output
 
-The current files are available
+The current files are available in both parquet and csv.
 
 * [processed_talks.parquet](output/processed_talks.parquet)
-* [processed_proceedings.parquet](output/processed_proceedings.parquet)
+* [processed_talks.csv](output/processed_talks.csv)
 * [processed_team.parquet](output/processed_team.parquet)
-* [processed_workshops.parquet](output/processed_workshops.parquet)
-
-```{r}
-arrow::read_parquet(
-  "https://rinpharma.github.io/data-pipelines/output/processed_proceedings.parquet"
-  ) |>
-  dplyr::glimpse()
-```
+* [processed_team.csv](output/processed_team.csv)
 
 ```{r}
 arrow::read_parquet(
@@ -58,13 +47,6 @@ arrow::read_parquet(
 ```{r}
 arrow::read_parquet(
   "https://rinpharma.github.io/data-pipelines/output/processed_team.parquet"
-  ) |>
-  dplyr::glimpse()
-```
-
-```{r}
-arrow::read_parquet(
-  "https://rinpharma.github.io/data-pipelines/output/processed_workshops.parquet"
   ) |>
   dplyr::glimpse()
 ```
