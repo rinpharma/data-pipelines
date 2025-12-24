@@ -25,28 +25,18 @@ list(
     command = get_data()
   ),
   tar_target(
+    name = data_processed_talks,
+    command = build_talks(get_gsheet_data[["talks"]])
+  ),
+  tar_target(
     name = data_processed_team,
     command = build_team(get_gsheet_data[["team"]])
   ),
   tar_target(
-    name = data_processed_proceedings,
-    command = build_proceedings(get_gsheet_data[["all_conferences"]])
-  ),
-  tar_target(
-    name = data_processed_talks,
-    command = build_talks(get_gsheet_data[["all_conferences"]])
-  ),
-  tar_target(
-    name = data_processed_workshops,
-    command = build_workshops(get_gsheet_data[["workshops"]])
-  ),
-  tar_target(
     name = write_data_to_files,
     command = write_data(
-      processed_team = data_processed_team,
-      processed_proceedings = data_processed_proceedings,
       processed_talks = data_processed_talks,
-      processed_workshops = data_processed_workshops
+      processed_team = data_processed_team
     )
   )
 )

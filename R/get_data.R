@@ -26,10 +26,8 @@ get_data <- function(
     
   
     gsheet_data <- list(
-      team = googlesheets4::read_sheet(sheet_url, sheet = "team2"),
-      all_conferences =googlesheets4::read_sheet(sheet_url, sheet = "all_conferences"),
-      redirects =googlesheets4::read_sheet(sheet_url, sheet = "redirects"),
-      workshops =googlesheets4::read_sheet(sheet_url, sheet = "workshops")
+      talks = googlesheets4::read_sheet(sheet_url, sheet = "talks"),
+      team = googlesheets4::read_sheet(sheet_url, sheet = "team")
     )
     
 
